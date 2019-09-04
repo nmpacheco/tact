@@ -140,6 +140,18 @@ func (s *Scheduler) removeRun(name string) (ok bool) {
 	return true
 }
 
+func (s *Scheduler) GetJobs() map[string]*tact.Context {
+	ctxs := make(map[string]*tact.Context)
+	for key, item := range s.running {
+		ctxs[key] = item
+	}
+	return ctxs
+}
+
+func (s *Scheduler) GetCrons() []*cron.Entry {
+	return s.cron.Entries()
+}
+
 // func logStats() {
 // 	for {
 // 		var m runtime.MemStats

@@ -16,4 +16,10 @@ type Node struct {
 	DBPassword  string            `json:"db_password,omitempty"`
 	DBPort      string            `json:"db_port,omitempty"`
 	LogFiles    map[string]string `json:"files,omitempty"`
+	Collectors  []string          `json:"collectors,omitempty"`
+}
+
+// Nodes holds a map of nodes
+type Nodes struct {
+	Nodes map[string]Node `json:"nodes"`
 }

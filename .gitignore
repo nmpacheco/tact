@@ -1,3 +1,6 @@
 statedb/
 Gopkg.*
 vendor/**
+nodes.json
+
+

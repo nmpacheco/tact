@@ -1,0 +1,41 @@
+{
+    "nodes": {
+        "host1": {
+            "hostname": "host1",
+            "netaddr": "host1.domain",
+            "type": "linux",
+            "ssh_port": "50022",
+            "ssh_user": "userHost1",
+            "ssh_password": "userPassword1",
+            "ssh_key": "AAAAB3NbuFml4OqVoE3lrcXvDfa/KNcJj0aq",
+            "api_url": "api1",
+            "api_user": "apiu1",
+            "api_password": "apip1",
+            "db_user": "dbu1",
+            "db_password": "dbp1",
+            "db_port": "1234",
+            "files": {
+                "syslog": "/var/log/syslog",
+                "syslog1": "/var/log/syslog1"
+            },
+            "collectors": [
+                "/linux/performance/iostat",
+                "/linux/config/pvs"
+            ]
+        },
+        "host2": {
+            "hostname": "host2",
+            "netaddr": "host2.domain",
+            "type": "linux",
+            "ssh_port": "50022",
+            "ssh_user": "userHost2",
+            "ssh_password": "userPassword2",
+            "ssh_key": "AAAAB3NbuFml4OqVoE3lrcXvDfa/KNcJj0aq",
+            "collectors": [
+                "/linux/performance/iostat",
+                "/linux/config/pvs",
+                "/linux/config"
+            ]
+        }
+    }
+}
